@@ -4,8 +4,8 @@ var _loginRequiredjs = require('../middlewares/loginRequired.js'); var _loginReq
 
 const route = new (0, _express.Router)();
 
-// route.get('/', userController.index);
-// route.get('/:id', userController.show);
+route.get('/', _UserControllerjs2.default.index);
+route.get('/:id', _UserControllerjs2.default.show);
 
 route.post('/', _UserControllerjs2.default.store);
 route.put('/:id', _loginRequiredjs2.default, _UserControllerjs2.default.update);
