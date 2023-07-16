@@ -14,6 +14,7 @@ var _tokenRoutesjs = require('./routes/tokenRoutes.js'); var _tokenRoutesjs2 = _
 
 const whiteList = [
   'http://localhost:3000',
+  'https://teste3-iixy.onrender.com'
 
 ];
 
