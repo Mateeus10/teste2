@@ -13,7 +13,6 @@ import fotoRoutes from './routes/fotoRoutes.js';
 import tokenRoutes from './routes/tokenRoutes.js';
 
 const whiteList = [
-  'http://localhost:3000',
   'https://teste3-iixy.onrender.com'
 
 ];

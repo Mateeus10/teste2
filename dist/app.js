@@ -13,7 +13,6 @@ var _fotoRoutesjs = require('./routes/fotoRoutes.js'); var _fotoRoutesjs2 = _int
 var _tokenRoutesjs = require('./routes/tokenRoutes.js'); var _tokenRoutesjs2 = _interopRequireDefault(_tokenRoutesjs);
 
 const whiteList = [
-  'http://localhost:3000',
   'https://teste3-iixy.onrender.com'
 
 ];
