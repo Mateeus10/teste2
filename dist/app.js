@@ -12,11 +12,12 @@ var _categoryRoutesjs = require('./routes/categoryRoutes.js'); var _categoryRout
 var _fotoRoutesjs = require('./routes/fotoRoutes.js'); var _fotoRoutesjs2 = _interopRequireDefault(_fotoRoutesjs);
 var _tokenRoutesjs = require('./routes/tokenRoutes.js'); var _tokenRoutesjs2 = _interopRequireDefault(_tokenRoutesjs);
 
-const whiteList = [
-  'https://teste3-iixy.onrender.com',
-  'http://localhost:3000',
+const whiteList = {
+  origin: 'http://localhost:3000',
+  credentials: true,            //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
 
-];
+};
 
 const corsOptions = {
   origin: function (origin, callback) {
