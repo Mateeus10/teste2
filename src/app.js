@@ -12,22 +12,6 @@ import categoryRoutes from './routes/categoryRoutes.js';
 import fotoRoutes from './routes/fotoRoutes.js';
 import tokenRoutes from './routes/tokenRoutes.js';
 
-const whiteList = {
-  origin: 'http://localhost:3000',
-  credentials: true,            //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
-
-};
-
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (whiteList.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  }
-};
 
 
 
@@ -40,7 +24,7 @@ class App {
   }
 
   middlewares() {
-    this.app.use(cors(corsOptions));
+    this.app.use(cors());
     this.app.use(helmet());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());

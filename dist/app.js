@@ -12,22 +12,6 @@ var _categoryRoutesjs = require('./routes/categoryRoutes.js'); var _categoryRout
 var _fotoRoutesjs = require('./routes/fotoRoutes.js'); var _fotoRoutesjs2 = _interopRequireDefault(_fotoRoutesjs);
 var _tokenRoutesjs = require('./routes/tokenRoutes.js'); var _tokenRoutesjs2 = _interopRequireDefault(_tokenRoutesjs);
 
-const whiteList = {
-  origin: 'http://localhost:3000',
-  credentials: true,            //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
-
-};
-
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (whiteList.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  }
-};
 
 
 
@@ -40,7 +24,7 @@ class App {
   }
 
   middlewares() {
-    this.app.use(_cors2.default.call(void 0, corsOptions));
+    this.app.use(_cors2.default.call(void 0, ));
     this.app.use(_helmet2.default.call(void 0, ));
     this.app.use(_express2.default.urlencoded({ extended: true }));
     this.app.use(_express2.default.json());
