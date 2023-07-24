@@ -37,7 +37,7 @@ var _bcryptjs = require('bcryptjs'); var _bcryptjs2 = _interopRequireDefault(_bc
         defaultValue: '',
         validate: {
           len: {
-            args: [3, 100],
+            args: [6, 50],
             msg: 'Senha precisa ter 5 a 100 caracteres',
           },
         },

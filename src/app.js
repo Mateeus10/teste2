@@ -7,10 +7,11 @@ import './database';
 
 import homeRoutes from './routes/homeRoutes.js';
 import userRoutes from './routes/userRoutes.js';
+import tokenRoutes from './routes/tokenRoutes.js';
 import productRoutes from './routes/produtoRoutes.js';
 import categoryRoutes from './routes/categoryRoutes.js';
 import fotoRoutes from './routes/fotoRoutes.js';
-import tokenRoutes from './routes/tokenRoutes.js';
+
 
 
 
@@ -34,10 +35,11 @@ class App {
   routes() {
     this.app.use('/', homeRoutes);
     this.app.use('/users/', userRoutes);
+    this.app.use('/tokens/', tokenRoutes);
     this.app.use('/produtos/', productRoutes);
     this.app.use('/category/', categoryRoutes);
     this.app.use('/fotos/', fotoRoutes);
-    this.app.use('/tokens/', tokenRoutes);
+
   }
 }
 

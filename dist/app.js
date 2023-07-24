@@ -7,10 +7,11 @@ require('./database');
 
 var _homeRoutesjs = require('./routes/homeRoutes.js'); var _homeRoutesjs2 = _interopRequireDefault(_homeRoutesjs);
 var _userRoutesjs = require('./routes/userRoutes.js'); var _userRoutesjs2 = _interopRequireDefault(_userRoutesjs);
+var _tokenRoutesjs = require('./routes/tokenRoutes.js'); var _tokenRoutesjs2 = _interopRequireDefault(_tokenRoutesjs);
 var _produtoRoutesjs = require('./routes/produtoRoutes.js'); var _produtoRoutesjs2 = _interopRequireDefault(_produtoRoutesjs);
 var _categoryRoutesjs = require('./routes/categoryRoutes.js'); var _categoryRoutesjs2 = _interopRequireDefault(_categoryRoutesjs);
 var _fotoRoutesjs = require('./routes/fotoRoutes.js'); var _fotoRoutesjs2 = _interopRequireDefault(_fotoRoutesjs);
-var _tokenRoutesjs = require('./routes/tokenRoutes.js'); var _tokenRoutesjs2 = _interopRequireDefault(_tokenRoutesjs);
+
 
 
 
@@ -34,10 +35,11 @@ class App {
   routes() {
     this.app.use('/', _homeRoutesjs2.default);
     this.app.use('/users/', _userRoutesjs2.default);
+    this.app.use('/tokens/', _tokenRoutesjs2.default);
     this.app.use('/produtos/', _produtoRoutesjs2.default);
     this.app.use('/category/', _categoryRoutesjs2.default);
     this.app.use('/fotos/', _fotoRoutesjs2.default);
-    this.app.use('/tokens/', _tokenRoutesjs2.default);
+
   }
 }
 
